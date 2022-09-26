@@ -1,0 +1,77 @@
+body {
+    min-height: 100vh;
+    
+    background-image: linear-gradient(rgb(11, 18, 229), rgb(7, 7, 72));
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.navbar {
+    background: black;
+}
+
+#index_jumbo {
+    margin-top: 100px;
+    color: white;
+    background: url('../img/vinyl-2.png');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    height: 4rem;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 0.5rem;
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* color: black; */
+    background: #fff;
+    border: 0px;
+}
+
+#input-btn {
+    margin-top: 0.7rem;
+}
+
+.footer_lang {
+    background: black;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    color: white;
+}
+
+/* Cards */
+.card-body {
+    width: 58vw;
+    padding: 5px;
+    /* min-height: 100px; */
+}
+
+.album_img {
+    height: 150px;
+    width: 150px;
+    border-radius: 4%;
+}
+
+.card-info {
+    width: 60%;
+    float: right;
+    text-align: left;
+}
+
+.card-link {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    vertical-align: bottom;
+}
+
