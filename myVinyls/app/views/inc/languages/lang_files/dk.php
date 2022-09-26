@@ -40,7 +40,7 @@ $lang = array(
     "link_nav_logout" => "Logud",
     "link_nav_reg" => "Tilmeld",
     "link_nav_login" => "Login",
-    "search_field_artist" => "Søg efter kunstner",
+    "search_field_artist" => "Søg efter kunstner, titel, år eller genre",
     "search_field_title" => "Søg efter titel",
     "search_field_release" => "Søg efter udgivelses år",
     "search_field_genre" => "Søg efter genre",
@@ -55,5 +55,3 @@ $lang = array(
     "lang_en" => "Engelsk",
     "lang_dk" => "Dansk"
 );
-
-?>
