@@ -24,7 +24,6 @@ flash('album_message');
 
 
 <div class="album-search">
-    <h3>Search here</h3>
     <form class="search-form" action="api_search.php" method="POST">
         <div id="artist-container">
             <input name="artist" class="search-input" id="artist-search" type="text" oninput="search(this.value)" placeholder="<?php echo $lang['search_field_artist']; ?>">
@@ -35,11 +34,7 @@ flash('album_message');
         <div class="result">
 
         </div>
-        <div>
-            <button class="btn btn-dark btn-block" id="input-btn">
-                <i class="fa fa-search"></i> <?php echo $lang['btn_album_search']; ?>
-            </button>
-        </div>
+
     </form>
 </div>
 

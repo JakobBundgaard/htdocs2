@@ -80,7 +80,12 @@ body {
     vertical-align: bottom;
 }
 
-#results {
+.artist-container {}
 
+#artist-search {
+    width: 40vw;
+}
+
+#results {
     border-radius: 4%;
 }
