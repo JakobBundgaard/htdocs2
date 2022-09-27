@@ -1,12 +1,6 @@
 <?php
 require APPROOT . '/views/inc/header.php';
-// require APPROOT . '/libraries/Database.php'; 
 flash('album_message');
-
-// $album = new Album();
-// $albumData = $album->viewData();
-
-// var_dump($albumData);
 ?>
 
 
@@ -24,33 +18,17 @@ flash('album_message');
 
 
 <div class="album-search">
-    <form class="search-form" action="api_search.php" method="POST">
+    <form class="search-form pull-left" action="apisearch" method="POST">
         <div id="artist-container">
             <input name="artist" class="search-input" id="artist-search" type="text" oninput="search(this.value)" placeholder="<?php echo $lang['search_field_artist']; ?>">
-            <!-- oninput="search(this.value)" -->
-
         </div>
-
         <div class="result">
 
         </div>
 
     </form>
 </div>
-
-<!-- From livesearch -->
-
-<!-- <ul id="dataViewer">
-    // <?php foreach ($albumData as $i) { ?>
-        <li><?php echo $i['artist']; ?></li>
-    <?php } ?>
-</ul> -->
-
-<!-- End From livesearch -->
-
 <div id="results">
-
-
     <?php foreach ($data['albums'] as $album) : ?>
 
 
@@ -62,16 +40,14 @@ flash('album_message');
                     <h5 class="card-subtitle mb-3"> <?php echo $album->title ?></h5>
                     <p class="card-text mb-1">Genre: <?php echo $album->genre ?></p>
                     <p class="card-text mb-1"><?php echo $lang['album_release']; ?>: <?php echo $album->released ?></p>
-                    <!-- <p class="card-text">Tracks: <?php echo $album->tracks ?></p> -->
                 </div>
                 <div class="card-link">
                     <a href="<?php echo URLROOT; ?>/albums/show/<?php echo $album->albumId; ?>" class="btn btn-dark btn-block"><?php echo $lang['btn_album_more']; ?></a>
                 </div>
             </div>
         </div>
-
-
     <?php endforeach; ?>
+
 </div>
 <div id="card_template" style="display: none;">
     <div class="card card-body mb-3">
@@ -82,7 +58,6 @@ flash('album_message');
                 <h5 class="card-subtitle mb-3"> {{:title}}</h5>
                 <p class="card-text mb-1">Genre: {{:genre}}</p>
                 <p class="card-text mb-1">Released: {{:released}}</p>
-                <!-- <p class="card-text">Tracks: </p> -->
             </div>
             <div class="card-link">
                 <a href="http://localhost/myVinyls/albums/show/{{:albumId}}" class="btn btn-dark btn-block">More</a>
