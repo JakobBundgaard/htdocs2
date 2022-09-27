@@ -1,9 +1,5 @@
 <?php
-/*
-   * App Core Class
-   * Creates URL & loads core controller
-   * URL FORMAT - /controller/method/params
-   */
+
 class Core
 {
   protected $currentController = 'Pages';
@@ -12,7 +8,6 @@ class Core
 
   public function __construct()
   {
-    //print_r($this->getUrl());
 
     $url = $this->getUrl();
 

@@ -1,4 +1,3 @@
-// Livesearch
 function search(artist) {
     console.log(artist);
     fetchSearchData(artist);

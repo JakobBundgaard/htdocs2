@@ -9,9 +9,6 @@ class Users extends Controller
   // Needed for language
   public function index()
   {
-    // if(isLoggedIn()){
-    //   // redirect('posts');
-    // }
 
     $data = [
       'name' => '',
@@ -63,9 +60,7 @@ class Users extends Controller
       // Validate Name
       if (empty($data['name'])) {
         http_response_code(400);
-        // echo json_encode(['info' => 'Name cannot be empty']);
         $data['name_err'] = 'Please enter name';
-        // exit();
       }
 
       if (strlen($data['name']) < 2 || strlen($data['name']) > 20) {

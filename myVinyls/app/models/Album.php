@@ -10,24 +10,15 @@ class Album
         $this->db = new Database;
     }
 
-    // FROM livesearch
     public function viewData()
     {
         $sql = "SELECT * FROM albums";
         $stmt = $this->db->query($sql);
-        // $stmt->execute();
         $result = $this->db->resultSet();
 
         return $result;
     }
 
-    // public function viewData() {
-    //     $query = "SELECT * FROM albums";
-    //     $stmt = $this->db->query($query);
-    //     $stmt->execute();
-    //     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //     return $data;
-    // }
 
     public function searchDataArtist($user_id, $str)
     {
@@ -48,16 +39,8 @@ class Album
         $results = $this->db->resultSet();
 
         return $results;
-
-        // $this->db->query("SELECT artist FROM albums WHERE name LIKE '%:str%'");
-        // $this->db->bind(':str', $str);
-
-        // $results = $this->db->resultSet();
-
-        // return $results;
     }
 
-    // END livesearch
 
     public function getAlbumsByUserId($user_id)
     {
@@ -89,7 +72,6 @@ class Album
         $this->db->bind(':released', $data['released']);
         $this->db->bind(':genre', $data['genre']);
         $this->db->bind(':tracks', $data['tracks']);
-        // $this->db->bind(':image_id', $data['image_id']);
 
         // Execute
         if ($this->db->execute()) {
@@ -146,11 +128,9 @@ class Album
 
     public function deleteAlbum($id)
     {
-        // $this->db->query('UPDATE albums SET artist = :artist, title = :title, released = :released, genre = :genre, tracks = :tracks, image = :image WHERE id = :id');
         $this->db->query('DELETE FROM albums WHERE id = :id');
         // Bind values
         $this->db->bind(':id', $id);
-
 
         // Execute
         if ($this->db->execute()) {

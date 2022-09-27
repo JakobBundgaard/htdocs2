@@ -80,7 +80,7 @@ body {
     vertical-align: bottom;
 }
 
-.artist-container {}
+
 
 #artist-search {
     width: 40vw;
@@ -89,3 +89,5 @@ body {
 #results {
     border-radius: 4%;
 }
+
+#registerbox {}

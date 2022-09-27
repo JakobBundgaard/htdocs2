@@ -7,7 +7,6 @@
   <div class="footer_lang  mt-5">
     <a href="<?php echo CURRENTURL; ?>?lang=en"><?php echo $lang['lang_en']; ?></a> |
     <a href="<?php echo CURRENTURL; ?>?lang=dk"><?php echo $lang['lang_dk']; ?></a>
-    <!-- English | Danish -->
   </div>
 
 
