@@ -4,7 +4,7 @@ function search(artist) {
 }
 
 function fetchSearchData(artist) {
-    $('#results').html('blabla');
+    $('#results').html('');
     fetch('albums/apisearch', {
         method: 'POST',
         body: new URLSearchParams('artist=' + artist)

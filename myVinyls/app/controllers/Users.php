@@ -48,11 +48,13 @@ class Users extends Controller
       // Validate Email
       if (empty($data['email'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Email missing']);
         $data['email_err'] = 'Please enter email';
       } else {
         // Check email
         if ($this->userModel->findUserByEmail($data['email'])) {
           http_response_code(400);
+          echo json_encode(['info' => 'Email is already taken']);
           $data['email_err'] = 'Email is already taken';
         }
       }
@@ -60,30 +62,36 @@ class Users extends Controller
       // Validate Name
       if (empty($data['name'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Name missing']);
         $data['name_err'] = 'Please enter name';
       }
 
       if (strlen($data['name']) < 2 || strlen($data['name']) > 20) {
         http_response_code(400);
+        echo json_encode(['info' => 'Name must be between 2 and 20 characters']);
         $data['name_err'] = 'Name must be between 2 and 20 characters';
       }
 
       // Validate Password
       if (empty($data['password'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Password missing']);
         $data['password_err'] = 'Pleae enter password';
       } elseif (strlen($data['password']) < 6) {
         http_response_code(400);
+        echo json_encode(['info' => 'Password must be at least 6 characters']);
         $data['password_err'] = 'Password must be at least 6 characters';
       }
 
       // Validate Confirm Password
       if (empty($data['confirm_password'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Please confirm password']);
         $data['confirm_password_err'] = 'Please confirm password';
       } else {
         if ($data['password'] != $data['confirm_password']) {
           http_response_code(400);
+          echo json_encode(['info' => 'Passwords do not match']);
           $data['confirm_password_err'] = 'Passwords do not match';
         }
       }
@@ -144,12 +152,14 @@ class Users extends Controller
       // Validate Email
       if (empty($data['email'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Email missing']);
         $data['email_err'] = 'Please enter email';
       }
 
       // Validate Password
       if (empty($data['password'])) {
         http_response_code(400);
+        echo json_encode(['info' => 'Password missing']);
         $data['password_err'] = 'Please enter password';
       }
 
@@ -159,6 +169,7 @@ class Users extends Controller
       } else {
         // User not found
         http_response_code(404);
+        echo json_encode(['info' => 'No user found']);
         $data['email_err'] = 'No user found';
       }
 
@@ -172,6 +183,8 @@ class Users extends Controller
           // Create Session
           $this->createUserSession($loggedInUser);
         } else {
+          http_response_code(400);
+          echo json_encode(['info' => 'Password incorrect']);
           $data['password_err'] = 'Password incorrect';
 
           $this->view('users/login', $data);

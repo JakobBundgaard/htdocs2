@@ -20,9 +20,7 @@ class Album
     }
 
 
-    public function searchDataArtist($user_id, $str)
-    {
-        $user_id = 1;
+    public function searchDataArtist($user_id, $str) {
         $sql = "SELECT *,
                         albums.id as albumId,
                         users.id as userId
