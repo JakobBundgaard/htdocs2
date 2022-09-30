@@ -40,12 +40,10 @@ class Posts extends Controller
       // Validate data
       if (empty($data['title'])) {
         http_response_code(400);
-        echo json_encode(['info' => 'Post title missing']);
         $data['title_err'] = 'Please enter title';
       }
       if (empty($data['body'])) {
         http_response_code(400);
-        echo json_encode(['info' => 'Post body missing']);
         $data['body_err'] = 'Please enter body text';
       }
 
@@ -90,12 +88,10 @@ class Posts extends Controller
       // Validate data
       if (empty($data['title'])) {
         http_response_code(400);
-        echo json_encode(['info' => 'Post title missing']);
         $data['title_err'] = 'Please enter title';
       }
       if (empty($data['body'])) {
         http_response_code(400);
-        echo json_encode(['info' => 'Post body missing']);
         $data['body_err'] = 'Please enter body text';
       }
 

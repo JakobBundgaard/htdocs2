@@ -50,49 +50,41 @@ class Albums extends Controller
             // Validation
             if (empty($data['artist'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Artist name missing']);
                 $data['artist_err'] = 'Please enter artist name';
             }
 
             if (strlen($data['artist']) < 1 || strlen($data['artist']) > 30) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Artist name must be between 1 and 30 characters']);
                 $data['artist_err'] = 'Artist name must be between 1 and 30 characters';
             }
 
             if (empty($data['title'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Album title missing']);
                 $data['title_err'] = 'Please enter a title';
             }
 
             if (strlen($data['title']) < 1 || strlen($data['title']) > 50) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Title must be between 1 and 50 characters']);
                 $data['title_err'] = 'Title must be between 1 and 50 characters';
             }
 
             if (empty($data['released'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Release year missing']);
                 $data['released_err'] = 'Please enter a release year';
             }
 
             if (strlen($data['released']) != 4) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Year must be a valid year']);
                 $data['released_err'] = 'Year must be a valid year';
             }
 
             if (empty($data['genre'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Please enter a genre']);
                 $data['genre_err'] = 'Please enter a genre';
             }
 
             if (strlen($data['genre']) < 1 || strlen($data['genre']) > 20) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Genre must be between 1 and 20 characters']);
                 $data['genre_err'] = 'Name must be between 1 and 20 characters';
             }
 
@@ -191,49 +183,40 @@ class Albums extends Controller
             // Validation
             if (empty($data['artist'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Artist name missing']);
                 $data['artist_err'] = 'Please enter artist name';
             }
 
             if (strlen($data['artist']) < 1 || strlen($data['artist']) > 30) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Artist name must be between 1 and 30 characters']);
                 $data['artist_err'] = 'Name must be between 1 and 30 characters';
             }
 
             if (empty($data['title'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Album title missing']);
                 $data['title_err'] = 'Please enter a title';
             }
 
             if (strlen($data['title']) < 1 || strlen($data['title']) > 50) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Title must be between 1 and 50 characters']);
                 $data['title_err'] = 'Title must be between 1 and 50 characters';
             }
 
             if (empty($data['released'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Release year missing']);
                 $data['released_err'] = 'Please enter a release year';
             }
 
             if (strlen($data['released']) != 4) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Year must be a valid year']);
-                $data['released_err'] = 'Year must be a valid year';
             }
 
             if (empty($data['genre'])) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Please enter a genre']);
                 $data['genre_err'] = 'Please enter a genre';
             }
 
             if (strlen($data['genre']) < 1 || strlen($data['genre']) > 20) {
                 http_response_code(400);
-                echo json_encode(['info' => 'Genre must be between 1 and 20 characters']);
                 $data['genre_err'] = 'Genre must be between 1 and 20 characters';
             }
 

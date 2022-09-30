@@ -2,7 +2,7 @@
 <a href="<?php echo URLROOT; ?>/albums" class="btn btn-dark"><i class="fa fa-backward"></i> <?php echo $lang['btn_back']; ?></a>
 <br>
 
-<div class="card card-body mb-3">
+<div class="card card-body mb-3 mt-3">
 
     <div class="bg-light p-2 mg-3">
         <img class="card-img-top" src=" <?php $data['album']->image ?>" alt="Album img">

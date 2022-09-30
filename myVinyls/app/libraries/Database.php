@@ -10,8 +10,7 @@ class Database
   private $stmt;
   private $error;
 
-  public function __construct()
-  {
+  public function __construct() {
     // Set DSN
     $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname . ';port=3306';
     $options = array(
