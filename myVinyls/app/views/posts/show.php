@@ -23,6 +23,16 @@
       </button>
   </form>
 <?php endif; ?>
+<?php if($data['post']->user_id != $_SESSION['user_id']) : ?>
+  <hr>
+  
+  <form class="pull-right" action="" method="post">
+    
+      <button type="submit" class="btn btn-dark center">
+          <i class="fa fa-envelope"></i><?php echo $lang['btn_reply']; ?>
+      </button>
+  </form>
+<?php endif; ?>
 </div>
 
 <?php require APPROOT . '/views/inc/footer.php'; ?>

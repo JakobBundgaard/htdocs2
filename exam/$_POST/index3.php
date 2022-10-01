@@ -14,16 +14,17 @@
 </form>
 
 <?php 
-
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['name'];
-    if(empty($_POST['name'])) {
-        echo 'Name empty';
-    }else {
-        echo $name;
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $name = $_POST['name'];
+        if(empty($name)) {
+            echo 'Name empty';
+        }else {
+            echo $name;
+        }
     }
-}
+
 
 ?>
+    
 </body>
 </html>

@@ -30,6 +30,7 @@ $lang = array(
     "btn_edit" => "Rediger",
     "btn_delete" => "Slet",
     "btn_submit" => "Tilføj",
+    "btn_reply" => " Svar",
     "link_reg" => "Allerede medlem? Login",
     "link_log" => "Ikke medlem? Tilmeld dig her",
     "link_nav_about" => "Hvem Er Vi",

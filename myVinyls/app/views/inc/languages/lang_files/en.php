@@ -31,6 +31,7 @@ $lang = array(
     "btn_edit" => "Edit",
     "btn_delete" => "Delete",
     "btn_submit" => "Submit",
+    "btn_reply" => " Reply",
     "link_reg" => "Have an account? Login",
     "link_log" => "No account? Register",
     "link_nav_about" => "About Us",
