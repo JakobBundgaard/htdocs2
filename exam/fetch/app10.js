@@ -1,5 +1,5 @@
-function fetchNames(data) {
-    fetch('api-get-names5.php', {
+function fetchData(data) {
+    fetch('api-get-data.php', {
         method: 'POST',
         body: JSON.stringify(data)
     })
