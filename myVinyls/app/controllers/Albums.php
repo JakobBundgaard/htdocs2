@@ -1,9 +1,7 @@
 <?php
 
-class Albums extends Controller
-{
-    public function __construct()
-    {
+class Albums extends Controller {
+    public function __construct() {
         if (!isLoggedIn()) {
             redirect('users/login');
         }
@@ -13,8 +11,7 @@ class Albums extends Controller
         $this->userModel = $this->model('User');
     }
 
-    public function index()
-    {
+    public function index() {
 
         // Get Albums
         $albums = $this->albumModel->getAlbumsByUserId($_SESSION['user_id']);
@@ -26,8 +23,7 @@ class Albums extends Controller
         $this->view('albums/index', $data);
     }
 
-    public function add()
-    {
+    public function add() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Sanitize
@@ -115,8 +111,7 @@ class Albums extends Controller
         }
     }
 
-    public function edit($id)
-    {
+    public function edit($id) {
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -256,8 +251,7 @@ class Albums extends Controller
         }
     }
 
-    public function show($id)
-    {
+    public function show($id) {
         $album = $this->albumModel->getAlbumById($id);
         $user = $this->userModel->getUserById($album->user_id);
 
@@ -269,8 +263,7 @@ class Albums extends Controller
         $this->view('albums/show', $data);
     }
 
-    public function apisearch()
-    {
+    public function apisearch() {
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Get existing album from model
@@ -281,8 +274,7 @@ class Albums extends Controller
         }
     }
 
-    public function delete($id)
-    {
+    public function delete($id) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Get existing album from model
             $album = $this->albumModel->getAlbumById($id);

@@ -1,14 +1,11 @@
 <?php
-class Users extends Controller
-{
-  public function __construct()
-  {
+class Users extends Controller {
+  public function __construct() {
     $this->userModel = $this->model('User');
   }
 
   // Needed for language
-  public function index()
-  {
+  public function index() {
 
     $data = [
       'name' => '',
@@ -24,8 +21,7 @@ class Users extends Controller
     $this->view('users/register', $data); 
   }
 
-  public function register()
-  {
+  public function register() {
     // Check for POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Process form
@@ -125,8 +121,7 @@ class Users extends Controller
     }
   }
 
-  public function login()
-  {
+  public function login() {
     // Check for POST
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Process form
@@ -195,16 +190,14 @@ class Users extends Controller
     }
   }
 
-  public function createUserSession($user)
-  {
+  public function createUserSession($user) {
     $_SESSION['user_id'] = $user->id;
     $_SESSION['user_email'] = $user->email;
     $_SESSION['user_name'] = $user->name;
     redirect('pages/index');
   }
 
-  public function logout()
-  {
+  public function logout() {
     unset($_SESSION['user_id']);
     unset($_SESSION['user_email']);
     unset($_SESSION['user_name']);

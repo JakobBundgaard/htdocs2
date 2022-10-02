@@ -1,0 +1,1 @@
+Welcom <?php echo $_GET['name'] ?>

@@ -54,6 +54,7 @@ $lang = array(
     "add_album_title" => "Title",
     "post_added" => "Added by",
     "post_body" => "Body",
+    "flash_album_added" => "Album added",
     "lang_en" => "English",
     "lang_dk" => "Danish"
 );
