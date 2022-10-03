@@ -38,14 +38,14 @@ class Core
     // Get params
     $this->params = $url ? array_values($url) : [];
 
-    // Call a callback with array of params
+    // Call  with array of params
     call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
   }
 
   public function getUrl()
   {
     if (isset($_GET['url'])) {
-      $url = rtrim($_GET['url'], '/\?');
+      $url = rtrim($_GET['url'], '/');
       $url = filter_var($url, FILTER_SANITIZE_URL);
       $url = explode('/', $url);
       return $url;
